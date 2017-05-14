@@ -3,4 +3,3 @@
  */
 
 import './views/homeview';
-//import './views/otherview';
