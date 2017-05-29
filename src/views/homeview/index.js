@@ -10,13 +10,14 @@ import {
     TextInput,
     TouchableHighlight
 } from 'react-native';
+import DashLine from 'rn-dashline';
 
 export default class RNAwesome extends Component {
     constructor(props){
         super(props);
         this.state = {
             text: ""
-        }
+        };
     }
     render() {
         return (
@@ -30,11 +31,12 @@ export default class RNAwesome extends Component {
                 <Text style={{padding: 10, fontSize: 42}}>
                     {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
                 </Text>
+                <DashLine style={{flex: 1, margin: 5}} lineWidth={2} />
             </View>
         );
     }
 }
-
+// add style
 const styles = StyleSheet.create({
     container: {
         flex: 1,
