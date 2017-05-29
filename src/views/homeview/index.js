@@ -7,8 +7,8 @@ import {
     StyleSheet,
     Text,
     View,
-    TextInput,
-    TouchableHighlight
+    TextInput
+//    TouchableHighlight
 } from 'react-native';
 import DashLine from 'rn-dashline';
 
