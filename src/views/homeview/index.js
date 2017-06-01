@@ -8,7 +8,8 @@ import {
     Text,
     View,
     TextInput
-//    TouchableHighlight
+    TouchableHighlight,
+    Animated
 } from 'react-native';
 import DashLine from 'rn-dashline';
 import ListViewBasics from '../../Test/ListViewBasics';
@@ -36,9 +37,10 @@ export default class RNAwesome extends Component {
                 </Text>
                 <DashLine lineWidth={1} />
                 <Text style={styles.title}>ListView Demo2</Text>
-                <ListViewBasics/>
+                <ListViewBasics style={{height: 70}}/>
                 <Text style={styles.title}>ActionSheetIOS Demo3</Text>
-                {/*{}*/}
+                {examples[0].render()}
+                <Text style={styles.title}>ActionSheetIOS Demo4</Text>
             </View>
         );
     }

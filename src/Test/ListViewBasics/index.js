@@ -11,7 +11,8 @@ import {
     View 
 } from 'react-native';
 //[ [ <rowData1>, <rowData2>, ... ], ... ]
-var source1 = [{'name':'John'}, {'name':'Joel'}, {'name':'James'}];
+var source1 = [{'name':'John'}, {'name':'Joel'}, {'name':'James'},
+    {'name':'John1'}, {'name':'Joel1'}, {'name':'James1'}];
 // { rowID: [ <rowData1>, <rowData2>, ... ], ... }
 var source2 = {'class1': ['stu1', 'stu2', 'stu3'],'class2': ['stu4', 'stu5']};
 //{ rowID: [ <rowData1>, <rowData2>, ... ], ... }
@@ -22,15 +23,16 @@ export default class ListViewBasics extends Component {
         super(props);
         const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
-            dataSource: ds.cloneWithRows(source3)
+            dataSource: ds.cloneWithRows(source1)
         };
     }
     render() {
+        let {style} = this.props;
         return (
-            <View style={{flex: 1, paddingTop: 22}}>
+            <View style={[{paddingTop: 22}, style]}>
                 <ListView
                     dataSource={this.state.dataSource}
-                    renderRow={(rowData, sectionID, rowID, highlightRow) => <Text>{rowID + ' ' + rowData.height + rowData.weight}</Text>}
+                    renderRow={(rowData, sectionID, rowID, highlightRow) => <Text>{rowData.name}</Text>}
                 />
             </View>
         );
