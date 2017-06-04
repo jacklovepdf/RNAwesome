@@ -14,6 +14,7 @@ import {
     Button
 } from 'react-native';
 
+import ActionSheet from 'react-native-actionsheet-api';
 import {TabNavigator} from 'react-navigation'
 import DashLine from 'rn-dashline';
 import ListViewBasics from '../../Test/ListViewBasics';
@@ -25,13 +26,16 @@ import {DraggableView,
 //import AnimatedScrollView from '../../Test/Animated/nativeDriver';
 
 import {examples} from '../../Test/ActionSheetIOS';
+var BUTTONS = ['苹果🍎', '梨🍐', '香蕉🍌', '橘子🍊', '都不喜欢'];
 
 class HomeScreen extends Component {
     constructor(props){
         super(props);
 //        this._handleNextPress =  this._handleNextPress.bind(this);
+        this.showActionSheet = this.showActionSheet.bind(this);
         this.state = {
-            text: ""
+            text: "",
+            clicked: "none"
         };
     }
 
@@ -63,7 +67,10 @@ class HomeScreen extends Component {
                 <ListViewBasics/>
                 <DashLine lineWidth={1} />
                 <Text style={styles.title}>ActionSheetIOS Demo3</Text>
-                {examples[0].render()}
+                <Text onPress={this.showActionSheet}>show actionSheet</Text>
+                <Text>{this.state.clicked}</Text>
+                {/*{examples[0].render()}*/}
+                <ActionSheet />
                 <DashLine lineWidth={1}/>
                 <Text style={styles.title}>Animated Demo4</Text>
                 <FadeInView>
@@ -82,6 +89,20 @@ class HomeScreen extends Component {
 
     _handleNextPress(nextRoute){
         this.props.navigator.push(nextRoute);
+    }
+
+    showActionSheet(){
+        ActionSheet.showActionSheetWithOptions({
+                title: '请选择您最喜欢的水果',
+                options: BUTTONS,
+                cancelButtonIndex: 4,
+                //destructiveButtonIndex: 0,
+                tintColor: 'green',
+            },
+            (buttonIndex) => {
+                this.setState({ clicked: BUTTONS[buttonIndex] });
+            }
+        );
     }
 }
 

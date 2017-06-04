@@ -37,8 +37,8 @@ export class FadeInView extends Component {
                 useNativeDriver: true,
 //                easing: Easing.back,
             }
-            // Starts the animation
-        ).start((event)=>alert(JSON.stringify(event)));
+            // Starts the animation (event)=>alert(JSON.stringify(event))
+        ).start();
     }
     render() {
         let {style, children} = this.props;
