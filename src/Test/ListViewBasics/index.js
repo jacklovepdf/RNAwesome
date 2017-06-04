@@ -29,12 +29,12 @@ export default class ListViewBasics extends Component {
     render() {
         let {style} = this.props;
         return (
-            <View style={[{paddingTop: 22}, style]}>
+//            {/*<View style={[style]}>*/}
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={(rowData, sectionID, rowID, highlightRow) => <Text>{rowData.name}</Text>}
                 />
-            </View>
+//            </View>
         );
     }
 }

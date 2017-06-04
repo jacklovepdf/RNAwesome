@@ -10,6 +10,7 @@
     "react": "^16.0.0-alpha.12",
     "react-native": "^0.44.0",
     "react-native-dashline": "^1.0.0",
+    "react-navigation": "^1.0.0-beta.11",
     "rn-dashline": "^1.0.0"
   },
   "devDependencies": {
