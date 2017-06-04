@@ -10,8 +10,11 @@ import {
     TextInput,
     TouchableHighlight,
     Animated,
-    NavigatorIOS
+    NavigatorIOS,
+    Button
 } from 'react-native';
+
+import {TabNavigator} from 'react-navigation'
 import DashLine from 'rn-dashline';
 import ListViewBasics from '../../Test/ListViewBasics';
 import {DraggableView,
@@ -23,7 +26,7 @@ import {DraggableView,
 
 import {examples} from '../../Test/ActionSheetIOS';
 
-export default class Home extends Component {
+class HomeScreen extends Component {
     constructor(props){
         super(props);
 //        this._handleNextPress =  this._handleNextPress.bind(this);
@@ -31,15 +34,21 @@ export default class Home extends Component {
             text: ""
         };
     }
+
+//    static navigationOptions = {
+//        title: 'HomeView',
+//    };
+
     render() {
-        const nextRoute = {
+/*        const nextRoute = {
             component: Home,
             title: 'Home Page',
             passProps: { myProp: 'Home' }
-        };
+        };*/
+        const { navigate } = this.props.navigation;
         return (
             //A View is useful as a container for other components, to help control style and layout.
-            <View style={styles.container} onPress={this._handleNextPress(nextRoute)}>
+            <View style={styles.container}>
                 <Text style={styles.title}>TextInput Demo1</Text>
                 <TextInput
                     style={{height: 40}}
@@ -62,23 +71,37 @@ export default class Home extends Component {
                 </FadeInView>
                 <TransformBounceView/>
                 <CompositeAnimation/>
+                <Button
+                    onPress={() => navigate('Second',{param: 'paramValue'})}
+                    title="Jump Next Screen"
+                    style={{backgroundColor:'#ff8300'}}
+                />
             </View>
         );
     }
 
     _handleNextPress(nextRoute){
-//        this.props.navigator.push(nextRoute);
-//        alert(JSON.stringify(this.props.navigator))
+        this.props.navigator.push(nextRoute);
     }
 }
+
+class AllContactsScreen extends Component{
+    render() {
+        return <Text>List of all contacts</Text>
+    }
+}
+
+export default Home = TabNavigator({
+    Recent: { screen: HomeScreen },
+    All: { screen: AllContactsScreen },
+});
 
 // add style
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5FCFF',
-        paddingHorizontal: 10,
-        marginTop: 60
+        paddingHorizontal: 10
     },
     title: {
         textAlign: 'center',
