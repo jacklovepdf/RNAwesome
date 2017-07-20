@@ -47,13 +47,22 @@ import SecondView from './views/secondview';
 //    }
 //}
 //top-level navigator component
-Home.navigationOptions = {
-    title: 'HomeView',
-};
-const RNAwesome = StackNavigator({
-    Home: { screen: Home },
-    Second: { screen: SecondView}
-});
+//Home.navigationOptions = {
+//    title: 'HomeView',
+//};
+
+class RNAwesome extends Component{
+
+    render(){
+        return(
+            <Home/>
+        );
+    }
+}
+//const RNAwesome = StackNavigator({
+//    Home: { screen: Home },
+//    Second: { screen: SecondView}
+//});
 
 //The AppRegistry just tells React Native which component is the root one for the whole application.
 AppRegistry.registerComponent('RNAwesome', () => RNAwesome);

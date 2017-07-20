@@ -1,6 +1,7 @@
 /**
  * Created by chengyong.lin on 17/5/14.
  */
+
 import React, { Component} from 'react';
 import {
     AppRegistry,
@@ -11,24 +12,26 @@ import {
     TouchableHighlight,
     Animated,
     NavigatorIOS,
-    Button
+    Button,
+    ScrollView
 } from 'react-native';
 
+import Perf from 'react-addons-perf';
 import ActionSheet from 'react-native-actionsheet-api';
-import {TabNavigator} from 'react-navigation'
-import DashLine from 'rn-dashline';
+//import {TabNavigator} from 'react-navigation'
+//import DashLine from 'rn-dashline';
 import ListViewBasics from '../../Test/ListViewBasics';
-import {DraggableView,
-    FadeInView,
-    TransformBounceView,
-    CompositeAnimation
-} from '../../Test/Animated';
+//import {DraggableView,
+//    FadeInView,
+//    TransformBounceView,
+//    CompositeAnimation
+//} from '../../Test/Animated';
 //import AnimatedScrollView from '../../Test/Animated/nativeDriver';
 
-import {examples} from '../../Test/ActionSheetIOS';
+//import {examples} from '../../Test/ActionSheetIOS';
 var BUTTONS = ['苹果🍎', '梨🍐', '香蕉🍌', '橘子🍊', '都不喜欢'];
 
-class HomeScreen extends Component {
+export default class Home extends Component {
     constructor(props){
         super(props);
 //        this._handleNextPress =  this._handleNextPress.bind(this);
@@ -49,10 +52,10 @@ class HomeScreen extends Component {
             title: 'Home Page',
             passProps: { myProp: 'Home' }
         };*/
-        const { navigate } = this.props.navigation;
+//        const { navigate } = this.props.navigation;
         return (
             //A View is useful as a container for other components, to help control style and layout.
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <Text style={styles.title}>TextInput Demo1</Text>
                 <TextInput
                     style={{height: 40}}
@@ -62,17 +65,17 @@ class HomeScreen extends Component {
                 <Text style={{padding: 10, fontSize: 42}}>
                     {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
                 </Text>
-                <DashLine lineWidth={1} />
+                {/*<DashLine lineWidth={1} />*/}
                 <Text style={styles.title}>ListView Demo2</Text>
                 <ListViewBasics/>
-                <DashLine lineWidth={1} />
-                <Text style={styles.title}>ActionSheetIOS Demo3</Text>
+                {/*<DashLine lineWidth={1} />*/}
+                {/*<Text style={styles.title}>ActionSheetIOS Demo3</Text>
                 <Text onPress={this.showActionSheet}>show actionSheet</Text>
-                <Text>{this.state.clicked}</Text>
+                <Text>{this.state.clicked}</Text>*/}
                 {/*{examples[0].render()}*/}
-                <ActionSheet />
-                <DashLine lineWidth={1}/>
-                <Text style={styles.title}>Animated Demo4</Text>
+                {/*<ActionSheet />*/}
+                {/*<DashLine lineWidth={1}/>*/}
+                {/*<Text style={styles.title}>Animated Demo4</Text>
                 <FadeInView>
                     <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}>Fading in</Text>
                 </FadeInView>
@@ -82,14 +85,14 @@ class HomeScreen extends Component {
                     onPress={() => navigate('Second',{param: 'paramValue'})}
                     title="Jump Next Screen"
                     style={{backgroundColor:'#ff8300'}}
-                />
-            </View>
+                />*/}
+            </ScrollView>
         );
     }
 
-    _handleNextPress(nextRoute){
+/*    _handleNextPress(nextRoute){
         this.props.navigator.push(nextRoute);
-    }
+    }*/
 
     showActionSheet(){
         ActionSheet.showActionSheetWithOptions({
@@ -112,10 +115,10 @@ class AllContactsScreen extends Component{
     }
 }
 
-export default Home = TabNavigator({
-    Recent: { screen: HomeScreen },
-    All: { screen: AllContactsScreen },
-});
+//export default Home = TabNavigator({
+//    Recent: { screen: HomeScreen },
+//    All: { screen: AllContactsScreen },
+//});
 
 // add style
 const styles = StyleSheet.create({
