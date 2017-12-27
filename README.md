@@ -5,15 +5,14 @@ some tips and experience in my work for react native.
 
 ## Table of Contents
 
-- [](#accustoming-yourself-to-javascript)
-- [](#variable-scope)
-- [](#working-with-functions)
-- [](#object-and-prototype)
-- [Arrays and Dictionary](#arrays-and-dictionary)
-- [Library and API Design](#library-and-api-design)
-- [Concurrency](#concurrency)
+- [样式布局中的困惑](#style－problem)
+- [原生组件也有坑](#bug－with－component)
+- [细节提升性能](#performance)
+- [逃不掉的版本控制](#version－control)
+- [优雅的项目架构](#project－structure)
+- [如何让rn表现更好](#more－better)
 
-## Accustoming Yourself to Javascript
+## 样式布局中的困惑
 
 1.了解你使用的js版本。
 
@@ -51,3 +50,34 @@ some tips and experience in my work for react native.
 更本无法保证最终链接文件的运行模式。
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
+
+## 原生组件也有坑
+
+
+
+
+
+<sup>[(back to table of contents)](#table-of-contents)</sup>
+
+## 细节提升性能
+
+
+
+
+<sup>[(back to table of contents)](#table-of-contents)</sup>
+
+## 逃不掉的版本控制
+
+
+
+
+<sup>[(back to table of contents)](#table-of-contents)</sup>
+
+## 优雅的项目架构
+
+
+
+
+<sup>[(back to table of contents)](#table-of-contents)</sup>
+
+## 如何让rn表现更好
