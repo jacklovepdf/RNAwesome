@@ -89,34 +89,34 @@ some tips and experience in my work for react native.
 ## 原生组件也有坑
 
 
-2017年中总结
+2017年终总结
 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
 ## 细节提升性能
 
-2017年中总结
+2017年终总结
 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
 ## 逃不掉的版本控制
 
-2017年中总结
+2017年终总结
 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
 ## 优雅的项目架构
 
-2017年中总结
+2017年终总结
 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
 ## 如何让rn表现更好
 
-2017年中总结
+2017年终总结
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
