@@ -26,7 +26,7 @@ some tips and experience in my work for react native.
 （2）你不知道的text组件样式
 
 
-2.3 
+1.3 
 
 > **Note**: 
 
