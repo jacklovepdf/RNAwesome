@@ -64,6 +64,7 @@ some tips and experience in my work for react native.
 
 3.4 ListView的使用技巧
 
+> **Note**: 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
@@ -77,6 +78,7 @@ some tips and experience in my work for react native.
 
 4.3 
 
+> **Note**: 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
@@ -91,17 +93,18 @@ some tips and experience in my work for react native.
 5.3 关于rn中的技术选型
 
 
+> **Note**: 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
 ## 如何让rn表现更好
 
-5.1 native可以让rn表现更好；
+5.1 rn中存在的不足；
 
+5.2 native可以让rn表现更好；
 
-5.2 rn中存在的不足；
+5.3 关于rn中的打包机制
 
-
-5.3 
+> **Note**: 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
