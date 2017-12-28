@@ -5,14 +5,14 @@ some tips and experience in my work for react native.
 
 ## Table of Contents
 
-- [样式布局中的困惑](#style－problem)
-- [原生组件也有坑](#bug－with－component)
-- [细节提升性能](#performance)
-- [逃不掉的版本控制](#version－control)
-- [优雅的项目架构](#project－structure)
-- [如何让rn表现更好](#more－better)
+- [1.样式布局中的困惑](#style－problem)
+- [2.原生组件也有坑](#bug－with－component)
+- [3.细节提升性能](#performance)
+- [4.逃不掉的版本控制](#version－control)
+- [5.优雅的项目架构](#project－structure)
+- [6.如何让rn表现更好](#more－better)
 
-## 样式布局中的困惑
+## 1.样式布局中的困惑
 
 1.1 页面布局
 
@@ -45,7 +45,7 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## 原生组件也有坑
+## 2.原生组件也有坑
 
 2.1 你不知道的text组件
 
@@ -69,7 +69,7 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## 细节提升性能
+## 3.细节提升性能
 
 3.1 不简单的事件绑定
 
@@ -86,7 +86,7 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## 逃不掉的版本控制
+## 4.逃不掉的版本控制
 
 4.1 繁琐的版本控制，更有效的定义接口，减少版本控制；
 
@@ -100,7 +100,7 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## 优雅的项目架构
+## 5.优雅的项目架构
 
 5.1 探索更优雅的项目架构
 
@@ -115,7 +115,7 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 
-## 如何让rn表现更好
+## 6.如何让rn表现更好
 
 6.1 rn中存在的不足
 
