@@ -16,7 +16,15 @@ some tips and experience in my work for react native.
 
 1.1 页面布局
 
-（1）rn中页面布局一般使用view组件，类似web中的div元素；
+（1）rn中页面布局一般使用view组件，类似web中的div元素，而布局的方式则主要采用使用flexbox；
+与web应用中不同的是，在rn中使用flex你不需要担心兼容性的问题，也不需要加类似浏览器中的各种前缀；
+同时，rn中的flex的默认行为以及属性取值范围与css中也存在不同，比如，flexDirection默认取值为'column'而不是'row',
+flex的取值只能是数字，而css中flex是一个合成属性，可以取类似0 1 auto这样的值。
+
+rn中的
+
+
+ (2) 慎用zIndex
 
 1.2 样式实现
 
