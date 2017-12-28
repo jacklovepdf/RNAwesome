@@ -26,8 +26,6 @@ some tips and experience in my work for react native.
 （2）你不知道的text组件样式
 
 
-1.3 
-
 > **Note**: 
 
 <sup>[(back to table of contents)](#table-of-contents)</sup>
