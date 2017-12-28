@@ -43,7 +43,7 @@ some tips and experience in my work for react native.
 2.3 小心Modal组件
 
 
-2.4 TouchableOpacity中的手势
+2.4 注意TouchableOpacity中的手势
 
 
 > **Note**: 
