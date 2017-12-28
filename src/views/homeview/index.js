@@ -120,7 +120,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5FCFF',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        fontSize: 16
     },
     title: {
         textAlign: 'center',
