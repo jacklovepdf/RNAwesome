@@ -30,7 +30,7 @@ export default class ListViewBasics extends Component {
 
     componentDidMount() {
         let src = [];
-        for(let i=0; i<5000; i++){
+        for(let i=0; i<10; i++){
             src.push({name: "jacklovepdf"+i})
         }
         this.setState({
