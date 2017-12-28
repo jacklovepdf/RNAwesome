@@ -97,11 +97,11 @@ some tips and experience in my work for react native.
 
 ## 如何让rn表现更好
 
-5.1 rn中存在的不足
+6.1 rn中存在的不足
 
-5.2 native可以让rn表现更好
+6.2 native可以让rn表现更好
 
-5.3 关于rn中的打包机制
+6.3 关于rn中的打包机制
 
 > **Note**: 
 
