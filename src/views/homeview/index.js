@@ -16,10 +16,8 @@ import {
     ScrollView
 } from 'react-native';
 
-import Perf from 'react-addons-perf';
 import ActionSheet from 'react-native-actionsheet-api';
 //import {TabNavigator} from 'react-navigation'
-//import DashLine from 'rn-dashline';
 import ListViewBasics from '../../Test/ListViewBasics';
 //import {DraggableView,
 //    FadeInView,
@@ -65,16 +63,13 @@ export default class Home extends Component {
                 <Text style={{padding: 10, fontSize: 42}}>
                     {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
                 </Text>
-                {/*<DashLine lineWidth={1} />*/}
                 <Text style={styles.title}>ListView Demo2</Text>
                 <ListViewBasics/>
-                {/*<DashLine lineWidth={1} />*/}
-                {/*<Text style={styles.title}>ActionSheetIOS Demo3</Text>
+                <Text style={styles.title}>ActionSheetIOS Demo3</Text>
                 <Text onPress={this.showActionSheet}>show actionSheet</Text>
-                <Text>{this.state.clicked}</Text>*/}
+                <Text>{this.state.clicked}</Text>
                 {/*{examples[0].render()}*/}
                 {/*<ActionSheet />*/}
-                {/*<DashLine lineWidth={1}/>*/}
                 {/*<Text style={styles.title}>Animated Demo4</Text>
                 <FadeInView>
                     <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}>Fading in</Text>

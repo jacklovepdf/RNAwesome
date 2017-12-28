@@ -1,13 +1,20 @@
 /**
  * Created by chengyong.lin on 17/5/14.
  */
+
+//rn原生组件
 import React, {Component} from 'react';
 import {
     AppRegistry,
-    NavigatorIOS
+    NavigatorIOS,
+    View,
+    Text
 } from 'react-native';
 
+//第三方组件
 import { StackNavigator, TabNavigator } from 'react-navigation';
+
+//业务组件
 import Home from './views/homeview';
 import SecondView from './views/secondview';
 
@@ -51,18 +58,16 @@ import SecondView from './views/secondview';
 //    title: 'HomeView',
 //};
 
-class RNAwesome extends Component{
-
-    render(){
-        return(
-            <Home/>
-        );
-    }
-}
-//const RNAwesome = StackNavigator({
-//    Home: { screen: Home },
-//    Second: { screen: SecondView}
-//});
+// class RNAwesome extends Component{
+//
+//     render(){
+//         return <Home />
+//     }
+// }
+const RNAwesome = StackNavigator({
+   Home: { screen: Home },
+   Second: { screen: SecondView}
+});
 
 //The AppRegistry just tells React Native which component is the root one for the whole application.
 AppRegistry.registerComponent('RNAwesome', () => RNAwesome);
