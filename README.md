@@ -21,10 +21,9 @@ some tips and experience in my work for react native.
 同时，rn中的flex的默认行为以及属性取值范围与css中也存在不同，比如，flexDirection默认取值为'column'而不是'row',
 flex的取值只能是数字，而css中flex是一个合成属性，可以取类似0 1 auto这样的值。
 
-rn中的
-
-
  (2) 慎用zIndex
+ 不当的使用zIndex导致组件渲染时候，出现空白的问题已经在项目中出现多次了。我们都知道zIndex的作用是控制组件可以展示在其它组件
+的上面。
 
 1.2 样式实现
 
@@ -32,6 +31,12 @@ rn中的
 
 
 （2）你不知道的text组件样式
+
+
+（3）不要设置样式宽高边框等属性值为小数(eg width:0.5)
+
+
+（4）样式的继承
 
 
 > **Note**: 
