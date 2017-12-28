@@ -49,6 +49,11 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 
 2.1 你不知道的text组件
 
+ (1)关于lineHeight
+ 
+ (2)text组件是块状组件还是行内组件
+ 
+ (3)numberOfLines的使用
 
 2.2 view组件也不是善茬
 
