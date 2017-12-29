@@ -11,14 +11,13 @@ some tips and experience in my work for react native.
 - [4.逃不掉的版本控制](#version－control)
 - [5.优雅的项目架构](#project－structure)
 - [6.如何让rn表现更好](#more－better)
+- [7.rn中状态管理](#status-manage)
 
 ## 1.样式布局中的困惑
 
 1.1 页面布局
-
-（1）rn中的布局
-
- rn中页面布局一般使用view组件，类似web中的div元素，而布局的方式则主要采用使用flexbox；
+    (1)rn中的布局
+    rn中页面布局一般使用view组件，类似web中的div元素，而布局的方式则主要采用使用flexbox；
 与web应用中不同的是，在rn中使用flex你不需要担心兼容性的问题，也不需要加类似浏览器中的各种前缀；
 同时，rn中的flex的默认行为以及属性取值范围与css中也存在不同，比如，flexDirection默认取值为'column'而不是'row',
 flex的取值只能是数字，而css中flex是一个合成属性，可以取类似0 1 auto这样的值。
@@ -89,10 +88,7 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 3.2 关于动画
 
 
-3.3 更好的状态管理，redux还是this.setState
-
-
-3.4 ListView的使用技巧
+3.3 ListView的使用技巧
 
 > **Note**: 
 
@@ -134,6 +130,13 @@ flex的取值只能是数字，而css中flex是一个合成属性，可以取类
 6.2 native可以让rn表现更好
 
 6.3 关于rn中的打包机制
+
+> **Note**: 
+
+<sup>[(back to table of contents)](#table-of-contents)</sup>
+
+## 7.rn中的状态管理(关于redux)
+
 
 > **Note**: 
 
