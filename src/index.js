@@ -1,4 +1,5 @@
 /**
+ * app entrance
  * Created by chengyong.lin on 17/5/14.
  */
 
@@ -12,9 +13,9 @@ import {
 } from 'react-native';
 
 //第三方组件
-// import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 
-//业务组件
+//pages of app
 import Home from './views/homeview';
 import SecondView from './views/secondview';
 
@@ -58,16 +59,16 @@ import SecondView from './views/secondview';
 //    title: 'HomeView',
 //};
 
-class RNAwesome extends Component{
-
-    render(){
-        return <Home />
-    }
-}
-// const RNAwesome = StackNavigator({
-//    Home: { screen: Home },
-//    Second: { screen: SecondView}
-// });
+// class RNAwesome extends Component{
+//
+//     render(){
+//         return <Text>1111</Text>
+//     }
+// }
+const RNAwesome = StackNavigator({
+   Home: { screen: Home },
+   Second: { screen: SecondView}
+});
 
 //The AppRegistry just tells React Native which component is the root one for the whole application.
 AppRegistry.registerComponent('RNAwesome', () => RNAwesome);
