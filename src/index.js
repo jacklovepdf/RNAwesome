@@ -65,7 +65,6 @@ const RNAwesome = StackNavigator(
        Second: { screen: SecondView }
     },
     {
-        initialRouteName: 'Home',
         headerMode: 'screen'
     }
 );

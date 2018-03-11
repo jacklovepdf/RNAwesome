@@ -26,7 +26,6 @@ var BUTTONS = ['苹果🍎', '梨🍐', '香蕉🍌', '橘子🍊', '都不喜�
 export default class Home extends Component {
     constructor(props){
         super(props);
-       // this._handleNextPress =  this._handleNextPress.bind(this);
         this.showActionSheet = this.showActionSheet.bind(this);
         this.state = {
             text: "",
