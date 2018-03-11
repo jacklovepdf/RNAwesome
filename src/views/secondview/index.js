@@ -33,12 +33,6 @@ export default class SecondView extends Component {
     };
 
     render() {
-        const nextRoute = {
-            component: SecondView,
-            title: 'SecondView',
-            passProps: { myProp: 'bar' },
-            itemWrapperStyle:{backgroundColor: '#ffffcc'}
-        };
         // let { param }  = this.props.navigation.state.params;
 
         return(

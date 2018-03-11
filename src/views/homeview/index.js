@@ -17,16 +17,8 @@ import {
 } from 'react-native';
 
 import ActionSheet from 'react-native-actionsheet-api';
-//import {TabNavigator} from 'react-navigation'
 import ListViewBasics from '../../Test/ListViewBasics';
-
 import styles from './styles';
-//import {DraggableView,
-//    FadeInView,
-//    TransformBounceView,
-//    CompositeAnimation
-//} from '../../Test/Animated';
-//import AnimatedScrollView from '../../Test/Animated/nativeDriver';
 
 //import {examples} from '../../Test/ActionSheetIOS';
 var BUTTONS = ['苹果🍎', '梨🍐', '香蕉🍌', '橘子🍊', '都不喜欢'];
@@ -34,7 +26,7 @@ var BUTTONS = ['苹果🍎', '梨🍐', '香蕉🍌', '橘子🍊', '都不喜�
 export default class Home extends Component {
     constructor(props){
         super(props);
-       this._handleNextPress =  this._handleNextPress.bind(this);
+       // this._handleNextPress =  this._handleNextPress.bind(this);
         this.showActionSheet = this.showActionSheet.bind(this);
         this.state = {
             text: "",
@@ -48,12 +40,8 @@ export default class Home extends Component {
    };
 
     render() {
-        const nextRoute = {
-            component: Home,
-            title: 'Home Page',
-            passProps: { myProp: 'Home' }
-        };
        const { navigate } = this.props.navigation;
+
         return (
             //A View is useful as a container for other components, to help control style and layout.
             <ScrollView style={styles.container}>
@@ -78,10 +66,6 @@ export default class Home extends Component {
                 />
             </ScrollView>
         );
-    }
-
-    _handleNextPress(nextRoute){
-        this.props.navigator.push(nextRoute);
     }
 
     showActionSheet(){
