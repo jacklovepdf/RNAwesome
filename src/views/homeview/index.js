@@ -19,6 +19,8 @@ import {
 import ActionSheet from 'react-native-actionsheet-api';
 //import {TabNavigator} from 'react-navigation'
 import ListViewBasics from '../../Test/ListViewBasics';
+
+import styles from './styles';
 //import {DraggableView,
 //    FadeInView,
 //    TransformBounceView,
@@ -32,7 +34,7 @@ var BUTTONS = ['苹果🍎', '梨🍐', '香蕉🍌', '橘子🍊', '都不喜�
 export default class Home extends Component {
     constructor(props){
         super(props);
-//        this._handleNextPress =  this._handleNextPress.bind(this);
+       this._handleNextPress =  this._handleNextPress.bind(this);
         this.showActionSheet = this.showActionSheet.bind(this);
         this.state = {
             text: "",
@@ -40,17 +42,17 @@ export default class Home extends Component {
         };
     }
 
-//    static navigationOptions = {
-//        title: 'HomeView',
-//    };
+   static navigationOptions = {
+       title: 'HomeView'
+   };
 
     render() {
-/*        const nextRoute = {
+        const nextRoute = {
             component: Home,
             title: 'Home Page',
             passProps: { myProp: 'Home' }
-        };*/
-//        const { navigate } = this.props.navigation;
+        };
+       const { navigate } = this.props.navigation;
         return (
             //A View is useful as a container for other components, to help control style and layout.
             <ScrollView style={styles.container}>
@@ -75,19 +77,19 @@ export default class Home extends Component {
                     <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}>Fading in</Text>
                 </FadeInView>
                 <TransformBounceView/>
-                <CompositeAnimation/>
+                <CompositeAnimation/>*/}
                 <Button
-                    onPress={() => navigate('Second',{param: 'paramValue'})}
+                    onPress={() => navigate('Second', {param: 'paramValue'})}
                     title="Jump Next Screen"
                     style={{backgroundColor:'#ff8300'}}
-                />*/}
+                />
             </ScrollView>
         );
     }
 
-/*    _handleNextPress(nextRoute){
+    _handleNextPress(nextRoute){
         this.props.navigator.push(nextRoute);
-    }*/
+    }
 
     showActionSheet(){
         ActionSheet.showActionSheetWithOptions({
@@ -103,30 +105,3 @@ export default class Home extends Component {
         );
     }
 }
-
-class AllContactsScreen extends Component{
-    render() {
-        return <Text>List of all contacts</Text>
-    }
-}
-
-//export default Home = TabNavigator({
-//    Recent: { screen: HomeScreen },
-//    All: { screen: AllContactsScreen },
-//});
-
-// add style
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-        paddingHorizontal: 10,
-        fontSize: 16
-    },
-    title: {
-        textAlign: 'center',
-        fontSize: 16,
-        color: '#616161',
-        lineHeight: 24
-    }
-});

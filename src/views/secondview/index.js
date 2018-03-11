@@ -10,36 +10,38 @@ import {
     Text,
     Button
 } from "react-native";
+import styles  from './styles';
 
 export default class SecondView extends Component {
-    //// Nav options can be defined as a function of the screen's props:
+    //Nav options can be defined as a function of the screen's props:
     static navigationOptions = ({ navigation }) => ({
         title: `SecondView ${navigation.state.params.param}`,
-        headerRight: <Button title="Info" onPress={()=>{}}/>,
+        headerRight: <Button title="Info" onPress={()=>{}}/>
     });
 
-//    _handleBackPress() {
-//        this.props.navigator.pop();
-//    }
-//
-//    _handleNextPress(nextRoute) {
-//        this.props.navigator.push(nextRoute);
-//    }
+/*   _handleBackPress() {
+       this.props.navigator.pop();
+   }
+
+   _handleNextPress(nextRoute) {
+       this.props.navigator.push(nextRoute);
+   }*/
 
     render() {
-/*        const nextRoute = {
+        const nextRoute = {
             component: SecondView,
             title: 'SecondView',
             passProps: { myProp: 'bar' },
             itemWrapperStyle:{backgroundColor: '#ffffcc'}
-        };*/
-        let {param}  = this.props.navigation.state.params;
+        };
+        // let { param }  = this.props.navigation.state.params;
+
         return(
-            <TouchableHighlight>
+            <SecondView style={styles.container}>
                 <Text style={{marginTop: 200, alignSelf: 'center'}}>
-                    chat with {param}!
+                    chat!
                 </Text>
-            </TouchableHighlight>
+            </SecondView>
         );
     }
 }

@@ -67,7 +67,7 @@ import SecondView from './views/secondview';
 // }
 const RNAwesome = StackNavigator({
    Home: { screen: Home },
-   Second: { screen: SecondView}
+   Second: { screen: SecondView }
 });
 
 //The AppRegistry just tells React Native which component is the root one for the whole application.
