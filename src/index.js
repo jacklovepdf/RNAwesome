@@ -59,16 +59,16 @@ import SecondView from './views/secondview';
 //    title: 'HomeView',
 //};
 
-// class RNAwesome extends Component{
-//
-//     render(){
-//         return <Text>1111</Text>
-//     }
-// }
-const RNAwesome = StackNavigator({
-   Home: { screen: Home },
-   Second: { screen: SecondView }
-});
+const RNAwesome = StackNavigator(
+    {
+       Home: { screen: Home },
+       Second: { screen: SecondView }
+    },
+    {
+        initialRouteName: 'Home',
+        headerMode: 'screen'
+    }
+);
 
 //The AppRegistry just tells React Native which component is the root one for the whole application.
 AppRegistry.registerComponent('RNAwesome', () => RNAwesome);

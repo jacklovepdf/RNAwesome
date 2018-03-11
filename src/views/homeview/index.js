@@ -43,7 +43,8 @@ export default class Home extends Component {
     }
 
    static navigationOptions = {
-       title: 'HomeView'
+       headerTitle: 'HomePage',
+       headerStyle: { backgroundColor:'#fff' }
    };
 
     render() {
@@ -70,14 +71,6 @@ export default class Home extends Component {
                 <Text style={styles.title}>ActionSheetIOS Demo3</Text>
                 <Text onPress={this.showActionSheet}>show actionSheet</Text>
                 <Text>{this.state.clicked}</Text>
-                {/*{examples[0].render()}*/}
-                {/*<ActionSheet />*/}
-                {/*<Text style={styles.title}>Animated Demo4</Text>
-                <FadeInView>
-                    <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}>Fading in</Text>
-                </FadeInView>
-                <TransformBounceView/>
-                <CompositeAnimation/>*/}
                 <Button
                     onPress={() => navigate('Second', {param: 'paramValue'})}
                     title="Jump Next Screen"
@@ -96,7 +89,6 @@ export default class Home extends Component {
                 title: '请选择您最喜欢的水果',
                 options: BUTTONS,
                 cancelButtonIndex: 4,
-                //destructiveButtonIndex: 0,
                 tintColor: 'green',
             },
             (buttonIndex) => {

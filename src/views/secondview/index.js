@@ -14,10 +14,10 @@ import styles  from './styles';
 
 export default class SecondView extends Component {
     //Nav options can be defined as a function of the screen's props:
-    static navigationOptions = ({ navigation }) => ({
-        title: `SecondView ${navigation.state.params.param}`,
-        headerRight: <Button title="Info" onPress={()=>{}}/>
-    });
+    // static navigationOptions = ({ navigation }) => ({
+    //     title: `SecondView ${navigation.state.params.param}`,
+    //     headerRight: <Button title="Info" onPress={()=>{}}/>
+    // });
 
 /*   _handleBackPress() {
        this.props.navigator.pop();
@@ -26,6 +26,11 @@ export default class SecondView extends Component {
    _handleNextPress(nextRoute) {
        this.props.navigator.push(nextRoute);
    }*/
+
+    static navigationOptions = {
+        headerTitle: 'DetailPage',
+        headerStyle: { backgroundColor:'#fff' }
+    };
 
     render() {
         const nextRoute = {
